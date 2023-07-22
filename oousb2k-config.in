@@ -1,0 +1,51 @@
+#!/bin/sh
+#Copyright (C) 2003 Juergen "George" Sawinski
+#All rights reserved.
+# 
+#@LICENSE@
+
+prefix=@prefix@
+libversion=@libversion@
+release=@VERSION@
+
+#@FIXME usage
+usage() {
+    cat <<EOF
+oou2k-config [options]
+Copyright (C) 2003 Juergen "George" Sawinski
+All rights reserved.
+
+Distributed und the terms of LGPL.
+
+Options:
+    --help
+    --version
+    --prefix
+    --libs
+EOF
+}
+
+if test $# -eq 0; then
+    usage
+    exit
+fi
+
+while test $# -gt 0; 
+do
+    case $1 in 
+    --help)
+	usage
+	exit
+    ;;
+    --version)
+	echo $release
+    ;;
+    --prefix)
+	echo $prefix
+    ;;
+    --libs)
+	echo "-L$prefix/lib -loousb2k-$libversion"
+    ;;
+    esac
+    shift;
+done

@@ -1,0 +1,8 @@
+liboousb2k is a library for accessing Ocean Optics USB2000
+compatible spectrometers.
+
+Thanks to Dr. David A. Landis <davel@oceanoptics.com>
+from Ocean Optics (http://www.oceanoptics.com).
+
+				Juergen "George" Sawinski
+				sawinski@user.sourceforge.net
